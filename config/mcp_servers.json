@@ -1,0 +1,1 @@
+{"mt5":{"mode":"http","url":"http://host.docker.internal:8000"},"ccxt":{"mode":"stdio","command":"npx","args":["@mcpfun/mcp-server-ccxt"],"env":{"DEFAULT_EXCHANGE":"binance","DEFAULT_MARKET_TYPE":"spot"}}}
