@@ -1,0 +1,7 @@
+# YAML configuration for trading strategy
+
+strategy:
+  name: example_strategy
+  parameters:
+    buy_threshold: 0.5
+    sell_threshold: 0.4
