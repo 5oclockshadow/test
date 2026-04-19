@@ -5,3 +5,8 @@ __pycache__/
 .secrets.env
 .venv/
 venv/
+
+# Runtime IO artifacts (generated; keep the directory skeleton in git)
+io/logs/
+io/cache/
+io/epochs/*/

@@ -1,0 +1,2 @@
+# io/epochs directory for canonical epoch artifacts
+# Each epoch writes a subdirectory: io/epochs/{epoch_num:04d}/
