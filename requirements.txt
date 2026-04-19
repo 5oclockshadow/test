@@ -1,0 +1,4 @@
+git+https://github.com/parthsarthi03/raptor.git
+faiss-cpu
+openai
+sentence-transformers
