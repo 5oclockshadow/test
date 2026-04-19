@@ -1,7 +1,41 @@
-# YAML configuration for trading strategy
+# Runtime configuration (non-secret)
+#
+# This file is loaded at startup and attached to `settings.runtime` in config.py.
+# It is intentionally separate from environment-based secrets in `.secrets.env`.
+#
+# Structure notes:
+# - config.py supports either a top-level mapping OR a top-level `settings:` key.
+# - Using `settings:` keeps runtime config namespaced and avoids confusion with env-only fields.
 
-strategy:
-  name: example_strategy
-  parameters:
-    buy_threshold: 0.5
-    sell_threshold: 0.4
+settings:
+  strategy:
+    name: example_strategy
+    description: "Simple threshold demo strategy"
+    symbols:
+      - "BTC/USDT"
+    timeframe: "1h"
+
+    parameters:
+      buy_threshold: 0.5
+      sell_threshold: 0.4
+      max_position_size: 1.0
+
+  execution:
+    paper_trading: true
+    slippage_bps: 5
+    fee_bps: 10
+
+  risk:
+    max_daily_loss_pct: 2.0
+    max_drawdown_pct: 10.0
+
+  data:
+    providers:
+      yfinance:
+        enabled: true
+      ccxt:
+        enabled: true
+      cftc:
+        enabled: true
+      mt5:
+        enabled: false
